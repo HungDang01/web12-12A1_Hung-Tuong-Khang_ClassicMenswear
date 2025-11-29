@@ -1,0 +1,329 @@
+body {
+    background-color: #fafaf4; /* light gray */
+    margin: 0;                 /* remove default spacing */
+    padding: 0;                /* optional, remove default padding */
+}
+.navbar {
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    z-index: 1000;
+    color:white;
+    padding-top: 7px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.navbar.scrolled {
+    background-color: beige;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    color: black;
+}
+.navbar .Signin{
+    margin-left:auto;
+}
+.navbar p {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar p::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;              /* space under text */
+    left: 0;
+    background-color: #f39c12; /* underline color */
+    transition: width 0.3s;
+}
+
+.navbar p:hover::after {
+    width: 100%;               /* underline grows on hover */
+}
+.navbar p:hover {
+    color: #f39c12;            /* change to your desired color */
+}
+img {
+    height: auto
+}
+.navbar img {
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+body {
+    margin: 0px;
+}
+.cover {
+  position: relative;       /* make container a reference for absolute positioning */
+  width: 100%;
+  overflow: hidden;         /* optional, clips anything outside */
+}
+.cover video {
+  width: 100%;              /* video fills container */
+  height: auto;
+  display: block;
+    object-fit: cover; /* crops/adjusts video to fit */
+}
+.cover h1 {
+  position: absolute;       /* position relative to container */
+  top: 40%;                 /* vertical center */
+  left: 50%;                /* horizontal center */
+  transform: translate(-50%, -50%); /* truly center both axes */
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* optional for readability */
+  pointer-events: none;      /* optional: allows clicking through the text */
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    font-weight: 500;
+}
+.image-row {
+    display: flex;
+    gap: 10px;             /* space between the images */
+    width: 100%;
+    height: 1200px;         /* height of images */
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;    /* for absolutely positioning the text */
+    width: 50%;            /* each image takes half width */
+    height: 100%;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* keeps images aligned and fills container */
+}
+
+.image-text {
+    position: absolute;
+    top: 80%;              /* vertical center */
+    left: 50%;             /* horizontal center */
+    transform: translate(-50%, -50%); /* perfectly centered */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* improves readability */
+    pointer-events: none;  /* allows clicks to pass through */
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    font-weight: 500;
+}
+.Intro {
+    display: flex;           /* side by side layout */
+    width: 100vw;
+    height: 100vh;           /* full viewport height */
+}
+
+.Intro img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    display: block;
+    object-position: 120% center; /* shift almost all the way to the right */
+}
+
+.Intro .content {
+    width: 800px;              /* right half for text */
+    height: 700px;            /* fill parent height */
+    display: flex;
+    flex-direction: column;  /* stack h1 and p */
+    justify-content: center; /* vertically center */
+    align-items: flex-start; /* align text to left */
+    padding: 50px;
+    padding-left: 150px;
+    box-sizing: border-box;
+    padding-top: 200px;
+    text-align: justify;
+      text-indent: 40px;  /* adjust the number as you like */
+}
+
+.Intro h1 {
+    margin: 0 0 20px 0;      /* space below heading */
+    font-size: 36px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+    color: #882132;
+}
+
+.Intro p {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.5;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    color: #042c1e;
+}
+.Sub-genre .TT {
+    font-size: 36px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+    color: #882132;
+    text-align: center;
+    padding-top: 300px;
+}
+.Sub-genre p {
+  width: 600px;
+  height: 100px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+  color: #042c1e;
+  font-size: 25px;
+  text-align: justify;
+  text-indent: 40px;  /* adjust the number as you like */
+}
+
+.Sub-genre .gen1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Sub-genre .gen1 h2 {
+    margin-bottom: 0px;
+    padding-top: 200px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+    font-size: 30px;
+    color: #882132;
+}
+.Sub-genre .gen2 {
+    display: flex;               /* place items side by side */
+    align-items: center;         /* vertical alignment */
+    margin: 0;
+    padding: 0;
+}
+.Sub-genre .gen2 img{
+    height: auto;
+    object-fit: cover;
+    display: block;
+    order: -1;
+    margin-left: 100px;
+    padding-left: 0px;
+}
+.Sub-genre .gen2 .txt{
+    flex: 1;                     /* text takes remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+}
+.Sub-genre h2{
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+    font-size: 30px;
+    color: #882132;
+}
+.Sub-genre .gen3 {
+    display: flex;               /* place items side by side */
+    align-items: center;         /* vertical alignment */
+    margin: 0;
+    padding: 0;
+}
+.Sub-genre .gen3 img{
+    height: auto;
+    object-fit: cover;
+    display: block;
+    order: 1;
+    margin-left: 100px;
+    padding-left: 0px;
+    padding-top: 150px;
+}
+.Sub-genre .gen3 .txt{
+    padding-bottom: 300px;
+    padding-left: 150px;
+    padding-right: 200px;
+
+}
+.Overall .Philosophy {
+    font-size: 36px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+    color: #882132;
+    text-align: center;
+    padding-top: 500px;
+}
+.Overall p {
+  width: 1200px;
+  height: 300px;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+  color: #042c1e;
+  font-size: 25px;
+
+  text-align: justify;
+
+  /* Center the block horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Optional: add padding if you want space inside the box */
+  padding: 20px;
+  
+  text-indent: 40px;  /* adjust the number as you like */
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  padding-top: 0px;
+}
+.Contact {
+    display: flex;          /* make child divs horizontal */
+    flex-wrap: wrap;        /* allow wrapping on small screens */
+    justify-content: center;
+    gap: 30px;              /* space between the lists */
+    background-color: black; 
+    color: #ffffff;
+    padding: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, Trebuchet MS, sans-serif;
+    width: auto;            /* container width adapts to content */
+    gap: 100px;
+    padding-bottom: 300px;
+}
+
+.Contact h2 {
+    font-size: 18px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Bodoni 72", serif;
+}
+.Contact li {
+    font-size: 12px;
+    list-style: none;
+
+}
+.Contact ul {
+    list-style: none;   /* removes bullets */
+    padding: 0;         /* removes default indent */
+    margin: 0;          /* removes extra spacing */
+}
+
+.Contact ul li {
+    margin: 0;          /* optional: removes spacing between items if needed */
+    padding: 0;         /* ensures no extra indent */
+    line-height: 3;
+}
+.Contact li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;              /* space under text */
+    left: 0;
+    background-color: #f39c12; /* underline color */
+    transition: width 0.3s;
+}
+
+.Contact li:hover::after {
+    width: 100%;               /* underline grows on hover */
+}
+.Contact li:hover {
+    color: #f39c12;            /* change to your desired color */
+}
